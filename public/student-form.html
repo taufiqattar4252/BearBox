@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Registration Portal — BearBox Form Autofill Test</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #090d16;
+      color: #f8fafc;
+      min-height: 120vh;
+    }
+    header {
+      background: #0f172a;
+      border-bottom: 1px solid #1e293b;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .container {
+      max-width: 760px;
+      margin: 36px auto;
+      padding: 0 20px;
+    }
+    .form-card {
+      background: #111827;
+      border: 1px solid #1e293b;
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+    h1 {
+      font-size: 22px;
+      margin-top: 0;
+      margin-bottom: 8px;
+      color: #f8fafc;
+    }
+    p.subtitle {
+      color: #94a3b8;
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .full-width {
+      grid-column: span 2;
+    }
+    label {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #cbd5e1;
+      margin-bottom: 6px;
+    }
+    .req { color: #ef4444; }
+    input, select, textarea {
+      width: 100%;
+      background: #090d16;
+      border: 1px solid #334155;
+      border-radius: 6px;
+      padding: 9px 12px;
+      color: #f8fafc;
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+    }
+    textarea {
+      min-height: 72px;
+      resize: vertical;
+    }
+    .btn-submit {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 13.5px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.15s;
+    }
+    .btn-submit:hover {
+      background: #1d4ed8;
+    }
+    .info-box {
+      margin-top: 28px;
+      padding: 14px 18px;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      border-radius: 8px;
+      font-size: 12px;
+      color: #93c5fd;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <span style="font-size: 18px; font-weight: 700; color: #f8fafc;">Academic Portal</span>
+      <span style="font-size: 11px; padding: 2px 7px; border-radius: 10px; background: rgba(59,130,246,0.2); color: #93c5fd;">Admissions</span>
+    </div>
+    <div style="font-size: 12px; color: #94a3b8;">Academic Year 2026-2027</div>
+  </header>
+
+  <div class="container">
+    <div class="form-card">
+      <h1>New Student Registration</h1>
+      <p class="subtitle">Complete the form below to enroll a student record into the system.</p>
+
+      <form id="studentRegistrationForm" onsubmit="event.preventDefault(); alert('Manual Submission Received: Student ' + document.getElementById('student_name').value + ' registered!');">
+        <div class="form-grid">
+          <!-- 1. Student Name -->
+          <div>
+            <label for="student_name">Student Name <span class="req">*</span></label>
+            <input type="text" id="student_name" name="student_name" placeholder="e.g. Aarav Sharma" required />
+          </div>
+
+          <!-- 2. Student ID -->
+          <div>
+            <label for="student_id">Student ID <span class="req">*</span></label>
+            <input type="text" id="student_id" name="student_id" placeholder="e.g. STU-1042" required />
+          </div>
+
+          <!-- 3. Date of Birth -->
+          <div>
+            <label for="dob">Date of Birth <span class="req">*</span></label>
+            <input type="date" id="dob" name="dob" required />
+          </div>
+
+          <!-- 4. Class -->
+          <div>
+            <label for="class_select">Class <span class="req">*</span></label>
+            <select id="class_select" name="class" required>
+              <option value="">-- Select Class --</option>
+              <option value="5">Class 5</option>
+              <option value="6">Class 6</option>
+              <option value="7">Class 7</option>
+              <option value="8">Class 8</option>
+              <option value="9">Class 9</option>
+              <option value="10">Class 10</option>
+            </select>
+          </div>
+
+          <!-- 5. Section -->
+          <div>
+            <label for="section_select">Section</label>
+            <select id="section_select" name="section">
+              <option value="">-- Select Section --</option>
+              <option value="A">Section A</option>
+              <option value="B">Section B</option>
+              <option value="C">Section C</option>
+            </select>
+          </div>
+
+          <!-- 6. Admission Date -->
+          <div>
+            <label for="admission_date">Admission Date</label>
+            <input type="date" id="admission_date" name="admission_date" />
+          </div>
+
+          <!-- 7. Parent Name -->
+          <div>
+            <label for="parent_name">Parent Name <span class="req">*</span></label>
+            <input type="text" id="parent_name" name="parent_name" placeholder="e.g. Priya Sharma" required />
+          </div>
+
+          <!-- 8. Parent Phone -->
+          <div>
+            <label for="parent_phone">Parent Phone <span class="req">*</span></label>
+            <input type="tel" id="parent_phone" name="parent_phone" placeholder="e.g. 9876543210" required />
+          </div>
+
+          <!-- 9. Email -->
+          <div class="full-width">
+            <label for="email">Contact Email</label>
+            <input type="email" id="email" name="email" placeholder="e.g. priya@example.com" />
+          </div>
+
+          <!-- 10. Address -->
+          <div class="full-width">
+            <label for="address">Residential Address <span class="req">*</span></label>
+            <textarea id="address" name="address" placeholder="Enter complete address" required></textarea>
+          </div>
+        </div>
+
+        <div>
+          <button type="submit" id="submitBtn" class="btn-submit">
+            Submit Registration
+          </button>
+        </div>
+      </form>
+
+      <div class="info-box">
+        <strong>📋 BearBox Form Autofill Test Data:</strong>
+        <pre style="margin: 8px 0 0 0; font-family: monospace; font-size: 11px; color: #f8fafc; background: #090d16; padding: 10px; border-radius: 6px; overflow-x: auto;">Student Name: Aarav Sharma
+Student ID: STU-1042
+Date of Birth: 2012-05-14
+Class: 7
+Section: A
+Parent Name: Priya Sharma
+Parent Phone: 9876543210
+Email: priya@example.com
+Address: 12 Lake Road, Pune
+Admission Date: 2026-06-10</pre>
+      </div>
+    </div>
+  </div>
+
+  <script src="/content.js"></script>
+</body>
+</html>

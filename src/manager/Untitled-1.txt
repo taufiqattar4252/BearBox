@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Northwind — vendor KYC (87 fields)</title>
+    <style>
+      body {
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        max-width: 44rem;
+        margin: 2rem auto;
+        padding: 0 1rem 4rem;
+        color: #102226;
+      }
+      .badge { font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #1f6f5b; }
+      h1 { font-size: 1.5rem; letter-spacing: -.03em; margin: .4rem 0 .5rem; }
+      .hint { color: #5c6f6b; line-height: 1.5; margin: 0 0 1.25rem; }
+      label { display: block; margin: 0.75rem 0; font-weight: 600; }
+      input, textarea {
+        display: block; width: 100%; margin-top: 0.3rem; padding: 0.5rem;
+      }
+      textarea { min-height: 5rem; }
+    </style>
+  </head>
+  <body>
+    <p class="badge">Ranasi measured pack</p>
+    <h1>Vendor KYC — 87 fields</h1>
+    <p class="hint">
+      Empty on purpose. Counted in this file: 87 inputs.
+      Careful typing at 8 seconds each is 11 minutes 36 seconds.
+      Open this page in the browser with Ranasi installed — Scan ID or Auto-Fill.
+      Not a live vendor portal.
+    </p>
+    <form>
+      <label>Legal entity name <input name="legal_name" type="text" /></label>
+      <label>Trade / DBA name <input name="dba" type="text" /></label>
+      <label>Entity type <input name="entity_type" type="text" /></label>
+      <label>Jurisdiction of formation <input name="jurisdiction" type="text" /></label>
+      <label>Year formed <input name="year_formed" type="text" /></label>
+      <label>Tax ID / EIN <input name="tax_id" type="text" /></label>
+      <label>VAT / GST number <input name="vat" type="text" /></label>
+      <label>D-U-N-S number <input name="duns" type="text" /></label>
+      <label>LEI <input name="lei" type="text" /></label>
+      <label>Company registration number <input name="reg_no" type="text" /></label>
+      <label>Company website <input name="website" type="url" /></label>
+      <label>Industry / NAICS <input name="industry" type="text" /></label>
+      <label>Employee count <input name="employees" type="text" /></label>
+      <label>Annual revenue (USD) <input name="annual_rev" type="text" /></label>
+      <label>HQ address line 1 <input name="hq_line1" type="text" /></label>
+      <label>HQ address line 2 <input name="hq_line2" type="text" /></label>
+      <label>HQ city <input name="hq_city" type="text" /></label>
+      <label>HQ state / region <input name="hq_region" type="text" /></label>
+      <label>HQ postal code <input name="hq_postal" type="text" /></label>
+      <label>HQ country <input name="hq_country" type="text" /></label>
+      <label>Billing address line 1 <input name="bill_line1" type="text" /></label>
+      <label>Billing city <input name="bill_city" type="text" /></label>
+      <label>Billing state / region <input name="bill_region" type="text" /></label>
+      <label>Billing postal code <input name="bill_postal" type="text" /></label>
+      <label>Billing country <input name="bill_country" type="text" /></label>
+      <label>Remit-to address line 1 <input name="ship_line1" type="text" /></label>
+      <label>Remit-to city <input name="ship_city" type="text" /></label>
+      <label>Remit-to postal code <input name="ship_postal" type="text" /></label>
+      <label>Authorized representative <input name="rep_full" type="text" /></label>
+      <label>Representative given name <input name="rep_given" type="text" /></label>
+      <label>Representative family name <input name="rep_family" type="text" /></label>
+      <label>Representative title <input name="rep_title" type="text" /></label>
+      <label>Representative date of birth <input name="rep_dob" type="date" /></label>
+      <label>Representative nationality <input name="rep_nationality" type="text" /></label>
+      <label>Representative country of issue <input name="rep_country" type="text" /></label>
+      <label>Representative document type <input name="rep_doc_type" type="text" /></label>
+      <label>Representative passport number <input name="rep_passport" type="text" /></label>
+      <label>Passport date of issue <input name="rep_issued" type="date" /></label>
+      <label>Passport date of expiry <input name="rep_expiry" type="date" /></label>
+      <label>Representative place of birth <input name="rep_pob" type="text" /></label>
+      <label>Representative work email <input name="rep_email" type="email" /></label>
+      <label>Representative phone <input name="rep_phone" type="tel" /></label>
+      <label>Accounts payable contact <input name="ap_name" type="text" /></label>
+      <label>AP email <input name="ap_email" type="email" /></label>
+      <label>AP phone <input name="ap_phone" type="tel" /></label>
+      <label>Sales contact <input name="sales_name" type="text" /></label>
+      <label>Sales email <input name="sales_email" type="email" /></label>
+      <label>Support email <input name="support_email" type="email" /></label>
+      <label>Remittance bank name <input name="bank_name" type="text" /></label>
+      <label>Bank branch <input name="bank_branch" type="text" /></label>
+      <label>Account name <input name="bank_account_name" type="text" /></label>
+      <label>Account number <input name="bank_account_no" type="text" /></label>
+      <label>ABA / routing number <input name="bank_routing" type="text" /></label>
+      <label>IBAN <input name="bank_iban" type="text" /></label>
+      <label>SWIFT / BIC <input name="bank_swift" type="text" /></label>
+      <label>Settlement currency <input name="bank_currency" type="text" /></label>
+      <label>Payment terms <input name="payment_terms" type="text" /></label>
+      <label>Preferred payment method <input name="payment_method" type="text" /></label>
+      <label>PO required <input name="po_required" type="text" /></label>
+      <label>W-9 on file <input name="w9" type="text" /></label>
+      <label>Certificate of insurance on file <input name="coi" type="text" /></label>
+      <label>Insurance carrier <input name="insurance_carrier" type="text" /></label>
+      <label>Insurance policy number <input name="insurance_policy" type="text" /></label>
+      <label>General liability limit (USD) <input name="gl_limit" type="text" /></label>
+      <label>Sanctions screening status <input name="sanctions" type="text" /></label>
+      <label>PEP declaration <input name="pep" type="text" /></label>
+      <label>Ultimate beneficial owner <input name="ubo_name" type="text" /></label>
+      <label>UBO ownership % <input name="ubo_pct" type="text" /></label>
+      <label>UBO country of residence <input name="ubo_country" type="text" /></label>
+      <label>UBO document number <input name="ubo_id" type="text" /></label>
+      <label>Control person <input name="controller_name" type="text" /></label>
+      <label>Control person title <input name="controller_title" type="text" /></label>
+      <label>NDAA / covered telecom attestation <input name="ndaa" type="text" /></label>
+      <label>Conflict of interest <input name="conflict" type="text" /></label>
+      <label>Uses subcontractors <input name="subcontract" type="text" /></label>
+      <label>Supplier diversity classification <input name="diversity" type="text" /></label>
+      <label>Sustainability contact <input name="sustainability" type="text" /></label>
+      <label>Data residency <input name="data_residency" type="text" /></label>
+      <label>Security contact email <input name="security_contact" type="email" /></label>
+      <label>Incident phone <input name="incident_phone" type="tel" /></label>
+      <label>Requested onboarding date <input name="onboarding_date" type="date" /></label>
+      <label>Buyer cost center <input name="cost_center" type="text" /></label>
+      <label>Buyer / requester <input name="buyer_name" type="text" /></label>
+      <label>Buyer email <input name="buyer_email" type="email" /></label>
+      <label>Spend category <input name="category" type="text" /></label>
+      <label>Inherent risk tier <input name="risk_tier" type="text" /></label>
+      <label>Compliance notes <textarea name="notes"></textarea></label>
+    </form>
+  </body>
+</html>
